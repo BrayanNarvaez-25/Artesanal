@@ -75,7 +75,7 @@ public class Maquina {
 	}
 
 	public void llenarMaquina() {
-		this.cantidadActual = this.capacidadMax - 100;
+		this.cantidadActual = this.capacidadMax - 200;
 	}
 
 	public boolean recargarCerveza(double cantidad) {
