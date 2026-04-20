@@ -8,6 +8,8 @@ public class Maquina {
 	private double capacidadMax;
 	private double cantidadActual;
 	private String codigo;
+	
+	public Maquina () {}
 
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMax, String codigo) {
 
