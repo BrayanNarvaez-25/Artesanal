@@ -5,9 +5,8 @@ import com.krakedev.artesanal.Maquina;
 public class TestRecargar {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		boolean resultado;
-		Maquina rubia = new Maquina("Pilsener", "Cerveza fría", 0.02, 8000);
+		Maquina rubia = new Maquina("Pilsener", "Cerveza fría", 0.02, 8000,"COD005");
 
 		System.out.println("--------ESTADO INICIAL--------");
 		rubia.imprimir();
@@ -30,5 +29,4 @@ public class TestRecargar {
 		System.out.println("¿Se recargo correctamente? " + resultado);
 		rubia.imprimir();
 	}
-
 }

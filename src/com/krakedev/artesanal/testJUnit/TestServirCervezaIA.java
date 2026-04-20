@@ -14,7 +14,7 @@ public class TestServirCervezaIA {
     @Test
     public void testServirCerveza_ExitoConPrimerConstructor() {
         // Se valida que la máquina sirva correctamente cuando hay suficiente cerveza
-        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.05, 1000);
+        Maquina maquina = new Maquina("Pilsener", "Rubia", 0.05, 1000, "COD001");
 
         maquina.recargarCerveza(500); // Se cargan 500 ml
 
@@ -30,7 +30,7 @@ public class TestServirCervezaIA {
     @Test
     public void testServirCerveza_ExitoConSegundoConstructor() {
         // Se valida que funcione correctamente usando el constructor sin capacidad explícita
-        Maquina maquina = new Maquina("Club", "Negra", 0.1);
+        Maquina maquina = new Maquina("Club", "Negra", 0.1, "COD002");
 
         maquina.recargarCerveza(1000);
 
@@ -46,7 +46,7 @@ public class TestServirCervezaIA {
     @Test
     public void testServirCerveza_SinSuficienteCerveza() {
         // Se valida que no sirva nada si no hay suficiente cerveza
-        Maquina maquina = new Maquina("Corona", "Ligera", 0.08, 1000);
+        Maquina maquina = new Maquina("Corona", "Ligera", 0.08, 1000, "COD003");
 
         maquina.recargarCerveza(100); // Solo hay 100 ml
 
@@ -62,7 +62,7 @@ public class TestServirCervezaIA {
     @Test
     public void testServirCerveza_CantidadExactaDisponible() {
         // Se valida que funcione correctamente cuando se sirve exactamente lo disponible
-        Maquina maquina = new Maquina("Heineken", "Premium", 0.2, 1000);
+        Maquina maquina = new Maquina("Heineken", "Premium", 0.2, 1000, "COD004");
 
         maquina.recargarCerveza(300);
 
@@ -78,7 +78,7 @@ public class TestServirCervezaIA {
     @Test
     public void testServirCerveza_SinCervezaInicial() {
         // Se valida el comportamiento cuando la máquina está vacía
-        Maquina maquina = new Maquina("Budweiser", "Clásica", 0.07, 1000);
+        Maquina maquina = new Maquina("Budweiser", "Clásica", 0.07, 1000, "COD005");
 
         double valor = maquina.servirCerveza(100);
 

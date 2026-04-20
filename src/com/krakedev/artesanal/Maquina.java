@@ -7,23 +7,26 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMax;
 	private double cantidadActual;
+	private String codigo;
 
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMax) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMax, String codigo) {
 
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
 		this.capacidadMax = capacidadMax;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, String codigo) {
 
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
 		this.capacidadMax = 10000;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
 	public String getNombreCerveza() {
@@ -58,10 +61,15 @@ public class Maquina {
 		return cantidadActual;
 	}
 
+	public String getCodigo() {
+		return codigo;
+	}
+
 	public void imprimir() {
 		String mensaje = "Nombre cerveza: " + nombreCerveza + "\nDescripción: " + descripcion
 				+ "\nPrecio por mililitro (ml): " + precioPorMl + "\nCapacidad Máxima: " + capacidadMax
-				+ "\nCantidad Actual: " + cantidadActual + "\n-----------------------------------";
+				+ "\nCantidad Actual: " + cantidadActual + "\nCódigo: " + codigo
+				+ "\n-----------------------------------";
 
 		System.out.println(mensaje);
 	}
@@ -81,18 +89,18 @@ public class Maquina {
 			return false;
 		}
 	}
-	
+
 	public double servirCerveza(double cantidad) {
-		
-		if(cantidadActual >= cantidad) {
+
+		if (cantidadActual >= cantidad) {
 			cantidadActual = cantidadActual - cantidad;
-			
+
 			double valor = cantidad * precioPorMl;
 			return valor;
-		}else {
+		} else {
 			return 0;
 		}
-		
+
 	}
-	
+
 }
