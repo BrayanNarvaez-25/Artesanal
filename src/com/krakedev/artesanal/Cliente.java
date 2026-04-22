@@ -1,5 +1,7 @@
 package com.krakedev.artesanal;
 
+
+
 public class Cliente {
 	
 	private String nombre;
@@ -7,13 +9,25 @@ public class Cliente {
 	private int codigo;
 	private double totalConsumido;
 	
+	
 	public Cliente() {}
 	
 	public Cliente (String nombre, String cedula) {
 		this.nombre = nombre;
 		this.cedula = cedula;
+		this.totalConsumido = 0;
 	}
 	
+	
+	
+	public Cliente(String nombre, String cedula, int codigo) {
+		super();
+		this.nombre = nombre;
+		this.cedula = cedula;
+		this.codigo = codigo;
+		this.totalConsumido = 0;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -38,6 +52,7 @@ public class Cliente {
 	public void setTotalConsumido(double totalConsumido) {
 		this.totalConsumido = totalConsumido;
 	}
+	
 	
 	
 }
