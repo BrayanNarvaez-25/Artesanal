@@ -21,6 +21,13 @@ public class Maquina {
 		this.codigo = codigo;
 	}
 
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl) {
+		super();
+		this.nombreCerveza = nombreCerveza;
+		this.descripcion = descripcion;
+		this.precioPorMl = precioPorMl;
+	}
+
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, String codigo) {
 
 		this.nombreCerveza = nombreCerveza;
